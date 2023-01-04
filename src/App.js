@@ -89,7 +89,7 @@ const Create = () => {
       <div className="container">
         <h2>Create a new URL</h2>
         <form onSubmit={handleSubmit}>
-          <label>URL</label>
+          <p>URL</p>
           <input type="text" required value={url} onChange={(e) => setUrl(e.target.value)} />
           <button>Create</button>
         </form>
