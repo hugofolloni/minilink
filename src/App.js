@@ -95,7 +95,7 @@ const Create = () => {
         </form>
       </div>
 
-      {created && <p>URL created! Your new URL is: <a href={'http;//minilink.tech/' + tag}>{'http;//minilink.tech/' + tag}</a></p>}
+      {created && <p className='response'>URL created! Your new URL is: <a className='response-link' href={'http://minilink.tech/' + tag}>{'http://minilink.tech/' + tag}</a></p>}
     </div>
   );
 }

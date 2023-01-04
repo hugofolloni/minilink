@@ -74,3 +74,14 @@ body {
 .container button:hover {
   background-color: #3F0745;
 }
+
+.response {
+  position: absolute;
+  width: 40vw;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  top: 0;
+  margin-top: 80vh;
+  margin-left: calc(50vw - 20vw);
+}
