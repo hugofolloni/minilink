@@ -1,13 +1,76 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #f1f1f1;
+}
+
+.background {
+  background-color: #5A0B4D;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  width: 40vw;
+  height: 40vh;
+  background-color: white;
+  border-radius: 12px;
+  top: 0;
+  margin-top: calc(50vh - 20vh);
+  margin-left: calc(50vw - 20vw);
+  padding: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5A0B4D;
+  margin-bottom: 20px;
+  padding: 0 20px
+}
+
+.container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #5A0B4D;
+  margin-bottom: 20px;
+}
+
+.container input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #5A0B4D;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.container button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5A0B4D;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.container button:hover {
+  background-color: #3F0745;
 }
