@@ -33,7 +33,6 @@ const Redirect = () => {
     })
   }
 
-  console.log(currentURL)
   if(currentURL[3] === ''){
     window.location.href = '/create';
   }
@@ -62,7 +61,14 @@ const Create = () => {
     let id = '';
     for(let i = 0; i < 5; i++){
       id += letters[Math.floor(Math.random() * letters.length)];
-    }
+    } 
+    fetch('https://minilink-omega.vercel.app/api/tags/' + id)
+    .then(res => res.json())
+    .then(data => {
+      if(data.length !== 0){
+        generateId();
+      }
+    })
     return id;
   }
 
@@ -72,6 +78,7 @@ const Create = () => {
     e.preventDefault();
     const tag = generateId();
     setTag(tag);
+
     const urlObject = {url, tag};
 
     fetch('https://minilink-omega.vercel.app/api/create', {
@@ -95,7 +102,7 @@ const Create = () => {
         </form>
       </div>
 
-      {created && <p className='response'>URL created! Your new URL is: <a className='response-link' href={'http://minilink.tech/' + tag}>{'http://minilink.tech/' + tag}</a></p>}
+      {created && <p className='response'>URL created! Your new URL is: <a className='response-link' href={'https://minilink.tech/' + tag}>{'https://minilink.tech/' + tag}</a></p>}
     </div>
   );
 }
